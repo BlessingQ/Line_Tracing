@@ -13,11 +13,12 @@
 void ultra_sonic::ultra_sonic_init(void){
 	DDRE |= (1<< DDRE6);
 	DDRE &= ~(1<<DDRE7);
+	TCCR1B |= (1<<CS12)| (1 << CS10);
 }
 
 
 
-uint8_t measure_distance(void)
+uint8_t ultra_sonic::measure_distance(void)
 {
 	PORTE &= ~(1 << PORTE6);
 	_delay_us(1);

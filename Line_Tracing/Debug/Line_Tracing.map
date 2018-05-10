@@ -50,17 +50,17 @@ Discarded input sections
  .data          0x00000000        0x0 ultra_sonic.o
  .bss           0x00000000        0x0 ultra_sonic.o
  .text._ZN11ultra_sonic16ultra_sonic_initEv
-                0x00000000        0x6 ultra_sonic.o
- .text._Z16measure_distancev
+                0x00000000        0xc ultra_sonic.o
+ .text._ZN11ultra_sonic16measure_distanceEv
                 0x00000000       0x88 ultra_sonic.o
- .debug_info    0x00000000      0x22e ultra_sonic.o
- .debug_abbrev  0x00000000      0x179 ultra_sonic.o
- .debug_loc     0x00000000       0xba ultra_sonic.o
+ .debug_info    0x00000000      0x234 ultra_sonic.o
+ .debug_abbrev  0x00000000      0x174 ultra_sonic.o
+ .debug_loc     0x00000000      0x106 ultra_sonic.o
  .debug_aranges
                 0x00000000       0x28 ultra_sonic.o
  .debug_ranges  0x00000000       0x18 ultra_sonic.o
- .debug_line    0x00000000      0x1a3 ultra_sonic.o
- .debug_str     0x00000000      0x2e1 ultra_sonic.o
+ .debug_line    0x00000000      0x1a9 ultra_sonic.o
+ .debug_str     0x00000000      0x2cb ultra_sonic.o
  .comment       0x00000000       0x31 ultra_sonic.o
  .debug_frame   0x00000000       0x34 ultra_sonic.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(divsf3.o)
