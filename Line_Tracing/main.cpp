@@ -18,7 +18,7 @@ int main(void)
     while (1) 
     {
 		
-		바꿔어여
+		바꿨어여
 		
 		
 		
