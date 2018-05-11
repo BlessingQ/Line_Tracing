@@ -10,17 +10,26 @@
 #include <avr/interrupt.h>
 #include <stdio.h>
 #include "ultra_sonic.h"
-
+#include "motor_driver.h"
 
 int main(void)
 {
     
+	motor_driver mymotor;
+	
+	
+	
+	
+
+	
     while (1) 
     {
 		
-		바꿨어여
-		
-		
+		mymotor.motor_break();
+		_delay_ms(4000);
+		mymotor.motor_forward();
+		_delay_ms(2000);
+		mymotor.motor_break();
 		
     }
 }

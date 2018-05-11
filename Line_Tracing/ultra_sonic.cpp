@@ -13,7 +13,7 @@
 void ultra_sonic::ultra_sonic_init(void){
 	DDRE |= (1<< DDRE6);
 	DDRE &= ~(1<<DDRE7);
-	TCCR1B |= (1<<CS12)| (1 << CS10);
+	TCCR1B |= (1<<CS12) | (1 << CS10); //분주비 1024
 }
 
 
