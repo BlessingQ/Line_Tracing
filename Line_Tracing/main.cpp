@@ -27,9 +27,13 @@ int main(void)
 		
 		mymotor.motor_break();
 		_delay_ms(4000);
-		mymotor.motor_forward();
+		mymotor.motor_forward(50);
 		_delay_ms(2000);
 		mymotor.motor_break();
+		_delay_ms(2000);
+		mymotor.motor_backward(70);
+		_delay_ms(2000);
+		mymotor.motor_wheel_forward(1,50);
 		
     }
 }

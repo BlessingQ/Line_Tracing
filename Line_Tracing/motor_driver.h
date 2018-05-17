@@ -15,16 +15,17 @@
 #include <util/delay.h>
 #include <avr/interrupt.h>
 
-#define DRI_PORT_DDR DDRE
-#define DRI_PORT PORTE
-#define IN1 PORTE0
-#define IN2 PORTE1
-#define IN3 PORTE2
-#define IN4 PORTE3
+#define DRI_PORT_DDR DDRB
+#define DRI_PORT PORTB
+#define IN1 PORTB0
+#define IN2 PORTB1
+#define IN3 PORTB2
+#define IN4 PORTB3
 #define PWM_PORT DDRB
 #define M_PWM1_PORT DDRB5
 #define M_PWM2_PORT DDRB6 
-
+#define left 1
+#define right 2
 
 class motor_driver
 {
@@ -34,7 +35,10 @@ public:
 		};
 	~motor_driver(){};
 
-void motor_forward(void);
+void motor_forward(uint8_t speed);
+void motor_backward(uint8_t speed);
+void motor_wheel_forward(uint8_t wheel,uint8_t speed);
+void motor_wheel_backward(uint8_t wheel,uint8_t speed);
 void motor_break(void);
 
 protected:
