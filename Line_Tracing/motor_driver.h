@@ -18,9 +18,9 @@
 #define DRI_PORT_DDR DDRB
 #define DRI_PORT PORTB
 #define IN1 PORTB0
-#define IN2 PORTB1
-#define IN3 PORTB2
-#define IN4 PORTB3
+#define IN2 PORTB2
+#define IN3 PORTB3
+#define IN4 PORTB4
 #define PWM_PORT DDRB
 #define M_PWM1_PORT DDRB5
 #define M_PWM2_PORT DDRB6 
