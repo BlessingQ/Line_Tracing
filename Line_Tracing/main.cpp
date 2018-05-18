@@ -12,6 +12,31 @@
 #include "ultra_sonic.h"
 #include "motor_driver.h"
 
+/*w 적외선 감지
+int main(void)
+{
+	int ad_val;
+	float f;
+	DDRD=0xff;
+	ADMUX=0x40;
+	ADCSRA=0xe7;
+	
+	while (1)
+	{
+		_delay_ms(1);
+		ad_val=ADCW;
+		f=(float)ad_val*5.0/1023.0;
+		if (f>1.5)
+		{
+			PORTD=0xff;
+			_delay_ms(100);
+		}
+		else
+		PORTD=0x00;
+	}
+}
+*/
+
 int main(void)
 {
 	motor_driver mymotor;
