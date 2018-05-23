@@ -11,7 +11,10 @@
 #include <stdio.h>
 #include "ultra_sonic.h"
 #include "motor_driver.h"
+#include "UART.h"
 
+
+volatile uint16_t distance;
 /*w 적외선 감지
 int main(void)
 {
@@ -40,28 +43,46 @@ int main(void)
 int main(void)
 {
 	motor_driver mymotor;
+	ultra_sonic mysonic;
+	UART myuart = UART(0,8);
+	char buffer[20];
 		
+	myuart.TxString("System On! \r\n");
     while (1) 
     {
-		
+	
+	distance = mysonic.measure_distance();
 		//mymotor.motor_break();
 		//_delay_ms(4000);
-		mymotor.motor_forward(30);
-		_delay_ms(2000);
-		mymotor.motor_break();
-		_delay_ms(2000);
-		mymotor.motor_break();
-		_delay_ms(2000);
-		mymotor.motor_wheel_forward(1,40);
-		_delay_ms(2000);
-		mymotor.motor_break();
-		_delay_ms(2000);
-		mymotor.motor_wheel_forward(2,40);
-		_delay_ms(2000);
-		//mymotor.motor_backward(70);
-		//mymotor.motor_wheel_forward(1,50);
-		//mymotor.motor_wheel_forward(2,50);
+		sprintf(buffer,"distance : %d \r\n",distance);
+		myuart.TxString(buffer);
+		
+		
+		if(distance < 8 ){
+			mymotor.motor_break();
+			//distance = mysonic.measure_distance();
+		}
+		else mymotor.motor_forward(60);
+		
+	
+		//mymotor.motor_break();
 		//_delay_ms(2000);
+		//mymotor.motor_wheel_forward(1,40);
+		//_delay_ms(2000);
+		//mymotor.motor_break();
+		//_delay_ms(2000);
+		//mymotor.motor_wheel_forward(2,40);
+		//_delay_ms(2000);
+		//mymotor.motor_break();
+		//_delay_ms(2000);
+		//mymotor.motor_backward(80);
+		//_delay_ms(3000);
+		//mymotor.motor_break();
+		//_delay_ms(1000);
+		////mymotor.motor_backward(70);
+		////mymotor.motor_wheel_forward(1,50);
+		////mymotor.motor_wheel_forward(2,50);
+		////_delay_ms(2000);
 		
 		
     }

@@ -39,6 +39,7 @@ SUBDIRS :=
 C_SRCS +=  \
 ../main.cpp \
 ../motor_driver.cpp \
+../UART.cpp \
 ../ultra_sonic.cpp
 
 
@@ -51,21 +52,25 @@ ASM_SRCS +=
 OBJS +=  \
 main.o \
 motor_driver.o \
+UART.o \
 ultra_sonic.o
 
 OBJS_AS_ARGS +=  \
 main.o \
 motor_driver.o \
+UART.o \
 ultra_sonic.o
 
 C_DEPS +=  \
 main.d \
 motor_driver.d \
+UART.d \
 ultra_sonic.d
 
 C_DEPS_AS_ARGS +=  \
 main.d \
 motor_driver.d \
+UART.d \
 ultra_sonic.d
 
 OUTPUT_FILE_PATH +=Line_Tracing.elf
@@ -82,6 +87,8 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

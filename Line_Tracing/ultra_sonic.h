@@ -25,17 +25,17 @@ class ultra_sonic
 {
 public:
 	ultra_sonic(){
-		ultra_sonic();
+		ultra_sonic_init();
 		};
 	~ultra_sonic(){};
 
 uint8_t measure_distance(void);
-
+uint8_t measure_distance_2(void);
 
 protected:
-	
+	void ultra_sonic_init(void);
 
-void ultra_sonic_init(void);
+
 
 private:
 
