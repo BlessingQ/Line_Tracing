@@ -7,6 +7,7 @@
 #include <util/delay.h>
 #include <avr/interrupt.h>
 //#include <stdio.h>
+#include "motor_driver.h"
 
 class redray
 {

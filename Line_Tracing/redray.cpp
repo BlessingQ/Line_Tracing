@@ -15,14 +15,14 @@ void redray::ray(void)
 	
 	_delay_ms(1);
 	ad_val=ADCW;
-	f=(float)ad_val*5.0/1023.0;
+	f=(float)ad_val * 5.0 / 1023.0;
 	if (f>1.5)
 	{
-		PORTD = 0xff;
-		//PORTB &= ~(1<<IN1) & ~(1<<IN2) & ~(1<<IN3) & ~(1<<IN4);
+		
+		PORTB &= ~(1<<IN1_R_F) & ~(1<<IN2_R_B) & ~(1<<IN3_L_F) & ~(1<<IN4_L_B);
 		_delay_ms(100);
 	}
 	else
-	PORTD = 0x00;
-	//PORTB |= (1<<IN1) | (1<<IN3);
+	
+	PORTB |= (1<<IN1_R_F) | (1<<IN3_L_F);
 }

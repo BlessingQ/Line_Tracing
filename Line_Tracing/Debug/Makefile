@@ -37,8 +37,10 @@ SUBDIRS :=
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../Bat_adc.cpp \
 ../main.cpp \
 ../motor_driver.cpp \
+../redray.cpp \
 ../UART.cpp \
 ../ultra_sonic.cpp
 
@@ -50,26 +52,34 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+Bat_adc.o \
 main.o \
 motor_driver.o \
+redray.o \
 UART.o \
 ultra_sonic.o
 
 OBJS_AS_ARGS +=  \
+Bat_adc.o \
 main.o \
 motor_driver.o \
+redray.o \
 UART.o \
 ultra_sonic.o
 
 C_DEPS +=  \
+Bat_adc.d \
 main.d \
 motor_driver.d \
+redray.d \
 UART.d \
 ultra_sonic.d
 
 C_DEPS_AS_ARGS +=  \
+Bat_adc.d \
 main.d \
 motor_driver.d \
+redray.d \
 UART.d \
 ultra_sonic.d
 
@@ -87,6 +97,10 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+
+
+
+
 
 
 

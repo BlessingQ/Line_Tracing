@@ -172,6 +172,12 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Bat_adc.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Bat_adc.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="main.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -179,6 +185,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="motor_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="redray.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="redray.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="UART.cpp">
